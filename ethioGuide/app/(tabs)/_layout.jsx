@@ -1,14 +1,15 @@
 import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons, Feather } from "@expo/vector-icons";
+import { Colors } from "@/constants/color";
 
 export default function TabLayout() {
   return (
       <Tabs
           screenOptions={{
               headerShown: false,
-              tabBarActiveTintColor: 'rgb(33, 27, 27)',
-              tabBarInactiveTintColor: "#CDCDE0",
+              tabBarActiveTintColor: '#22049ae4',
+              tabBarInactiveTintColor: Colors.text.secondary,
               tabBarShowLabel: false,
               tabBarStyle: {
                   backgroundColor: "#fff",
@@ -35,12 +36,12 @@ export default function TabLayout() {
               tabBarIcon: ({ focused, color }) => <Ionicons
                   name={focused ? 'chatbubble' : 'chatbubble-outline'}
                   size={26} 
-                  color={color} />
+                  color={Colors.text.secondary} />
           }} />
 
-          <Tabs.Screen name="profile" options={{
+          <Tabs.Screen name="favorite" options={{
               tabBarIcon: ({ focused, color }) => <Ionicons
-                  name={focused ? 'person' : 'person-outline'}
+                  name={focused ? 'heart' : 'heart-outline'}
                   size={26} 
                   color={color} />
           }} />
