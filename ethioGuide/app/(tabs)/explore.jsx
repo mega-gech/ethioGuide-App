@@ -4,70 +4,12 @@ import Header from "@/components/Header";
 import SectionHeader from "@/components/SectionHeader";
 import MenuItem from "@/components/MenuItem";
 import CategoryImages from "@/assets/images/categories";
+import {PROFILE_MENU} from "@/assets/images/categories/asset";
 
 
 
 export default function Explore() {
-  const PROFILE_MENU = [
-    {
-      title: "History of the Ethiopian Empire",
-      data: [
-        { name: "Early Period", icon: CategoryImages.fasil },
-        { name: "Medieval Period", icon: CategoryImages.history },
-        { name: "Modern Period", icon: CategoryImages.history }
-      ]
-    },
-    {
-      title: "Religions of Ethiopia",
-      data: [
-        { name: "Orthodox Christianity", icon: CategoryImages.history },
-        { name: "Islam", icon: CategoryImages.history }
-      ]
-    },
-    {
-      title: "Festivals and Holy Days",
-      data: [
-        { name: "Timket", icon: CategoryImages.dressing },
-        { name: "Meskel", icon: CategoryImages.dressing }
-      ]
-    },
-    {
-      title: "Traditional Clothing",
-      data: [
-        { name: "Habesha Kemis", icon: CategoryImages.culture }
-      ]
-    },
-    {
-      title: "Music & Dance",
-      data: [
-        { name: "Eskista", icon: CategoryImages.music }
-      ]
-    },
-    {
-      title: "Cuisine and Culinary Traditions",
-      data: [
-        { name: "Eskista", icon: CategoryImages.music }
-      ]
-    },
-    {
-      title: "mountains and landscapes",
-      data: [
-        { name: "Eskista", icon: CategoryImages.music }
-      ]
-    },
-    {
-      title: "femous people",
-      data: [
-        { name: "Eskista", icon: CategoryImages.music }
-      ]
-    },
-    {
-      title: "natural wonders",
-      data: [
-        { name: "Eskista", icon: CategoryImages.music }
-      ]
-    }
-  ];
+  
 
   //  correct state (use title as key)
  const [activeSection, setActiveSection] = useState(null);
