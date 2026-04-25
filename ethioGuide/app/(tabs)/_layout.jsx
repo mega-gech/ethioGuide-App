@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { Ionicons, Feather } from "@expo/vector-icons";
 import { Colors } from "@/constants/color";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 export default function TabLayout() {
   return (
@@ -25,19 +26,28 @@ export default function TabLayout() {
                   focused? 'home' : 'home-outline'}  size={26} color={color}/>
           }} />
 
-          <Tabs.Screen name="explore" options={{
-              tabBarIcon: ({ focused, color }) => <Feather
-                  name={focused ? 'search' : 'search'}
+          <Tabs.Screen
+           name="explore"
+            options={{
+           tabBarIcon: ({ focused, color }) => (
+          <MaterialIcons
+           name={focused ? "category" : "menu-book"}
+         size={26}
+         color={color}
+      />
+    ),
+  }}
+/>
+        
+   
+    <Tabs.Screen name="chat" options={{
+              tabBarIcon: ({ focused, color }) => <Ionicons
+                  name={focused ? 'chatbubble' : 'chatbubble-outline'}
                   size={26} 
                   color={color} />
           }} />
 
-          <Tabs.Screen name="chat" options={{
-              tabBarIcon: ({ focused, color }) => <Ionicons
-                  name={focused ? 'chatbubble' : 'chatbubble-outline'}
-                  size={26} 
-                  color={Colors.text.secondary} />
-          }} />
+         
 
           <Tabs.Screen name="favorite" options={{
               tabBarIcon: ({ focused, color }) => <Ionicons

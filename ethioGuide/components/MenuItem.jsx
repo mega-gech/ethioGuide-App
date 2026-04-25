@@ -19,7 +19,7 @@ export default function MenuItem({ item }) {
       <Link href={`/details/${item.id}`} asChild>
         <TouchableOpacity 
           activeOpacity={0.7}
-          className="flex-row items-center p-4 bg-white rounded-lg shadow"
+          className="flex-row items-center p-4 bg-white rounded-lg shadow mx-2"
         >
           <Image source={item.icon}
            style={{
